@@ -37,6 +37,7 @@ public class BookController {
     public String editBook(@PathVariable("id")int bookid, Model model){
         Book book = new Book();
         book = bookRepository.findOne(bookid);
+        bookRepository.delete(bookid);
         model.addAttribute("book", book);
         return "bookform";
     }
