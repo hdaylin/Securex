@@ -33,13 +33,12 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li sec:authorize="hasRole('ROLE_USER')"><a href="/books/add">Add Book</a></li>
+                    <li sec:authorize="isAuthenticated()"><a href="/books/add">Add Book</a></li>
                     <li><a href="/books/list">Show Books</a></li>
 
+                    <li sec:authorize="isAuthenticated()"><a href="/logout">Logout</a></li>
 
-                    <li sec:authorize="hasRole('ROLE_USER')"><a href="/logout">Logout</a></li>
-
-                    <li sec:authorize="hasRole('ROLE_USER')==false"><a href="/login">Login</a></li>
+                    <li sec:authorize="isAnonymous()"><a href="/login">Login</a></li>
 
 
                 </ul>
@@ -52,7 +51,7 @@
 
         <div class="starter-template">
             <h1>Securex</h1>
-            <h1 sec:authorize="hasRole('ROLE_USER')">Welcome User</h1>
+            <h1>Welcome <span sec:authentication="name"></span></h1>
             <p class="lead">Use this document as a way to quickly start any new project.<br/> All you get is this text and a mostly barebones HTML document.</p>
         </div>
 
