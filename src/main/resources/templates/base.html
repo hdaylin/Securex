@@ -46,10 +46,13 @@
             </div><!--/.nav-collapse -->
         </div>
     </nav>
+    <br/><br/><br/><br/><br/>
+    <div class="wrapper">
     <div class="container">
 
         <div class="starter-template">
             <h1>Securex</h1>
+            <h1 sec:authorize="hasRole('ROLE_USER')">Welcome User</h1>
             <p class="lead">Use this document as a way to quickly start any new project.<br/> All you get is this text and a mostly barebones HTML document.</p>
         </div>
 
@@ -61,5 +64,6 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </th:block>
+    </div>
 </body>
 </html>

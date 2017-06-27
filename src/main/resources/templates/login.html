@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org ">
+<html lang="en" xmlns:th="www.thymeleaf.org " xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,11 +12,14 @@
 <body>
 <th:block th:replace="base :: nav"></th:block>
 
+<div class ="wrapper">
+
 <div class="container">
 
     <div class="starter-template">
         <h1>Securex</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br/> All you get is this text and a mostly barebones HTML document.</p>
+
     </div>
     <br />
     <div th:if="${param.error}">
@@ -31,7 +34,7 @@
         <div><input type="submit" value="Sign In"/></div>
     </form>
 </div><!-- /.container -->
-
+</div>
 <th:block th:replace="base :: footlinks"></th:block>
 </body>
 </html>
